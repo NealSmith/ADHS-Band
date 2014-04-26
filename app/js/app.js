@@ -2,15 +2,16 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', [
+angular.module('signups', [
   'ngRoute',
-  'myApp.filters',
-  'myApp.services',
-  'myApp.directives',
-  'myApp.controllers'
+  'signups.filters',
+  'signups.services',
+  'signups.directives',
+  'signups.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.when('/Reports', {templateUrl: 'partials/reports.html', controller: 'reportsCtrl'});
+  $routeProvider.when('/Data', {templateUrl: 'partials/data.html', controller: 'dataEntryCtrl'});
+  $routeProvider.when('/DataClean', {templateUrl: 'partials/dataClean.html', controller: 'dataCleanCtrl'});
+  $routeProvider.otherwise({redirectTo: '/Reports'});
 }]);

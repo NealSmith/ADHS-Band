@@ -2,10 +2,13 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', [])
-  .controller('MyCtrl1', [function() {
+angular.module('signups.controllers', [])
+  .controller('reportsCtrl', [function() {
 
   }])
-  .controller('MyCtrl2', [function() {
+  .controller('dataEntryCtrl', [function() {
+
+    }])
+  .controller('dataCleanCtrl', [function() {
 
   }]);
